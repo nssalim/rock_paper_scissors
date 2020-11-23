@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Rock, Paper, Scissors</h1>
+    {% for player in tasks %}
+    <div>
+        <p>
+            {{ task.title }} : <b>{{ task.description }}</b> # use  from game.py
+            {% if task.done %}
+            <span> ✅ </span>
+            {% endif %}
+        </p>
+    </div>
+    {% endfor  %}
+{% endblock %}
